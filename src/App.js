@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
 
-         <h1>Site da Ju =)</h1>
+         <h1>Site da Ju =)</h1> 
 
       </header>
     </div>

@@ -35,3 +35,5 @@ jobs:
           projectName: 'julianarodrigues'
           directory: 'build'
           gitHubToken: ${{ secrets.TOKEN_GITHUB }}
+          branch: main
+          wranglerVersion: '3'

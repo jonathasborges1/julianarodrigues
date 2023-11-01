@@ -21,10 +21,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies
-        run: | 
-          npm install -g npm@10.2.2
-          npm install --legacy-peer-deps
+      - name: Install dependencies [1]
+        run: npm install -g npm@10.2.2
+
+      - name: Install dependencies [2]
+        run: npm install --legacy-peer-deps
 
       - name: Build worker
         run: npm run build

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, Typography, Grid } from '@mui/material';
 
-import avatarIMG from '../../assets/juliana-rodrigues-advogada-avatar.png'
+import avatarIMG from '../../assets/juliana-rodrigues-advogada-avatar.webp'
 import MagicCard from '../../components/MagicCard';
 
 interface AboutProps {
@@ -11,7 +11,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = () => {
    
    const textColorBlack = "#000";
-   const backgroundColorWhite = "#e9e7e1" // 212534 // e9e7e1
+   const backgroundColorWhite = "#b5b5b5" // 212534 // e9e7e1
 
    return (
       <Grid id={"about"} container 
@@ -33,9 +33,15 @@ const About: React.FC<AboutProps> = () => {
                      p:{xs:1,md:2,lg:2,xl:4},border:"1px solid purple", borderRadius:2, justifyContent:"center",                     
                   }}
                >
-                  <Grid item xs={12} sx={{pt:4}}></Grid>
+                  <Grid item xs={12} sx={{pt:{xs:4,lg:4,xl:10}}}></Grid>
                   <Grid item xs={4} lg={9} xl={7} sx={{display:"flex",justifyContent:"center"}} >
-                     <Avatar src={avatarIMG} alt="juliana-rodrigues-advogada" sx={{opacity:0.9,height:{xs:"100%"},width:{xs:"100%",lg:"75%"}}} />
+                     <Avatar src={avatarIMG} alt="juliana-rodrigues-advogada" 
+                        sx={{
+                           opacity:0.9, 
+                           height:{xs:"120px",md:"75%",lg:"95%",xl:"90%"}, 
+                           width:{xs:"120px",md:"75%",lg:"75%",xl:"90%"}
+                        }}
+                     />
                   </Grid>
                   <Grid item xs={12} sx={{zIndex:"1"}} ><Typography variant={"h6"} sx={{border:"0px solid blue",color:"#fff"}}>Advogada Trabalhista</Typography></Grid>
                   <Grid item xs={12}><Typography variant={"body2"} sx={{color:"#fff"}} >OAB/AM - 10547</Typography></Grid>

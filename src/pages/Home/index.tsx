@@ -33,17 +33,17 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                sx={{
                   justifyItems:"center",
                   textAlign:{xs:"center",sm:"left"},
-                  gap:{xs:4,lg:5,xl:6}, 
+                  gap:{xs:4,lg:5,xl:4}, 
                   p:{xs:1},
                   justifyContent:"center", 
                }}>
                <Grid item>
-                  <Typography variant={"h1"}>
+                  <Typography variant={"h1"} sx={{fontSize:{xl:"2.6rem"}}} >
                      Advocacia Especializada em <b>direito trabalhista</b>.
                   </Typography>
                </Grid>
                <Grid item>
-                  <Typography variant={"body1"} > {/* sx={{fontWeight:200, fontSize:{xs:"0.93rem", xl:"1.36rem"}  }}*/}
+                  <Typography variant={"body1"} sx={{fontSize:{xl:"1.1rem"},fontWeight:200  }} > {/* sx={{fontWeight:200, fontSize:{xs:"0.93rem", xl:"1.36rem"}  }}*/}
                      <b style={{color:"#DAA520"}}>Garanta seu direito como trabalhador</b>, Fale agora com um de nossos especialistas e busque agora mesmo seus direitos na justica do trabalho.
                   </Typography>
                </Grid>

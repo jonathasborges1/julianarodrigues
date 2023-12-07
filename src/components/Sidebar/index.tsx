@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Grid, Link } from '@mui/material';
+import { Grid, Link, Typography } from '@mui/material';
 
 const Sidebar: React.FC = () => {
 
@@ -45,21 +45,35 @@ const Sidebar: React.FC = () => {
    return(
       <header style={{border:"0px solid red"}}>
          <nav style={{border:"0px solid blue"}}>
-            <Grid container sx={{gap:2, border:"0px solid black", display:{xs:"block", md:"flex"}}}>
+            <Grid container sx={{gap:5, border:"0px solid white", display:{xs:"block", md:"flex"}, pr:{lg:2}  }}>
                {menuList.map((item,index) => {
                   return(
-                     <Grid item key={index} sx={{ border:"0px solid red", p:2  }} >
+                     <Grid item key={index} sx={{ border:"0px solid red", p:"0px 0px",    }} >
                         <Link href={item.href} 
                            sx={{ 
                               color: "#DAA520", 
-                              '&:hover': {borderBottom: '2px solid red', color: "white", }, 
-                              padding:1,
-                              borderBottom: item.href === activeSection ? '2px solid white' : 'none',
+                              
+                              // padding:0.4,
                               borderRadius:1,
+                              
                               textDecoration:"none",
                            }} 
                         >
+                           <Typography variant='body2' 
+                              sx={{
+                                 fontSize:"0.9rem",
+                                 p:0,m:0, lineHeight:"30px",
+         
+                                 // '&:hover': {borderBottom: '2px solid red', color: "white", }, 
+                                 borderBottom: item.href === activeSection ? '2px solid white' : 'none',
+                                 // border:"1px solid blue",
+                                 // padding:"10px 0px",
+                              }} 
+                           >
                               {item.label}
+                           </Typography>
+       
+                             
                         </Link>
                      </Grid>
                   )

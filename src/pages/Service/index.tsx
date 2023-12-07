@@ -73,8 +73,8 @@ const Service: React.FC<ServiceProps> = ({ children }) => {
 {/*AREAS DO DIREITO*/}
                {conteudo.map((item,index) => {
                   return(
-                     <Grid item key={index} xs={12} lg={3.9} xl={3.8} sx={{p:{xs:2,md:2,lg:2,xl:4},border:"0px solid red"}} >
-                        <Grid container sx={{gap:{xs:4,md:4}}}>
+                     <Grid item key={index} xs={12} lg={3.9} xl={3.8} sx={{p:{xs:2,md:2,lg:2,xl:2},border:"0px solid red"}} >
+                        <Grid container sx={{gap:{xs:4,md:4,lg:2,xl:4}}}>
 
                            <Grid item sx={{display:"flex", flexDirection:"row" ,justifyItems:"center", justifyContent:"center",border:"0px solid red"}}>
                               {item.icon}
@@ -84,7 +84,7 @@ const Service: React.FC<ServiceProps> = ({ children }) => {
                                     fontSize:{
                                        xs:"1.3rem", 
                                        lg:"1.2rem",
-                                       xl:"1.4rem"
+                                       xl:"1.2rem"
                                     } 
                                  }} 
                                  >

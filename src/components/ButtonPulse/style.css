@@ -1,0 +1,31 @@
+
+
+.pulse-button {
+  position: relative;
+
+  margin-left: -50px;
+  margin-top: -40px;
+  display: block;
+
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5); /* Corrigindo a notação rgba */
+  animation: pulse 2s infinite; /* Removendo o prefixo -webkit- */
+}
+
+.pulse-button:hover {
+  animation: none; /* Removendo o prefixo -webkit- */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(0, 255, 0, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.1);
+  }
+}

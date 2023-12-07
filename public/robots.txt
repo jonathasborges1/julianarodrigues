@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /dist/      # Exclui a pasta de distribuição do Vite
+Disallow: /node_modules/  # Exclui a pasta node_modules
+
+# Exclui páginas específicas, se necessário
+Disallow: /exemplo-pagina1/
+Disallow: /exemplo-pagina2/
+
+# Se você quiser permitir que todos os bots acessem todas as áreas do site, use:
+# User-agent: *
+# Disallow:

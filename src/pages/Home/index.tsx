@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
+import { Avatar, Grid, Typography } from '@mui/material';
 
 import imgWallpaper from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper.webp'
 import ArrowAnimated from '../../components/ArrowAnimated';
@@ -25,7 +25,6 @@ const Home: React.FC<HomeProps> = ({ children }) => {
    return (
       <Grid id={"home"} container sx={{p:0, justifyContent:"center", border:"0px solid blue",gap:{xs:3,md:3,lg:5,xl:6}}}>
 
-         {/* <Grid item xs={11} sx={{opacity:1}}><Typography variant='h1' sx={{fontSize:{xs:"2.3rem",md:"3.4rem"}}}>Conteudo Principal</Typography></Grid> */}
          <Grid item xs={12} sx={{ pt:{xs:"4rem",md:"5rem"} }}></Grid>
          
          <Grid item xs={11} md={6} lg={4.5} sx={{pt:{xs:"0rem"},display:"flex", border:"0px solid red"}}>
@@ -42,8 +41,8 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                      Advocacia Especializada em <b>direito trabalhista</b>.
                   </Typography>
                </Grid>
-               <Grid item>
-                  <Typography variant={"body1"} sx={{fontSize:{xl:"1.1rem"},fontWeight:200  }} > {/* sx={{fontWeight:200, fontSize:{xs:"0.93rem", xl:"1.36rem"}  }}*/}
+               <Grid item sx={{p:{xl:"0px 24px 0px 0px"}}} >
+                  <Typography variant={"body1"} sx={{fontWeight:200}} > {/* sx={{fontWeight:200, fontSize:{xs:"0.93rem", xl:"1.36rem"}  }}*/}
                      <b style={{color:"#DAA520"}}>Garanta seu direito como trabalhador</b>, Fale agora com um de nossos especialistas e busque agora mesmo seus direitos na justica do trabalho.
                   </Typography>
                </Grid>
@@ -60,17 +59,30 @@ const Home: React.FC<HomeProps> = ({ children }) => {
          </Grid>
          
          <Grid item xs={11} md={4.5} xl={4}  >
-            <Grid container sx={{alignItems:"center"}}>
-               <Grid item sx={{display:"flex"}} >
-                  <div style={{border:"1px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
-                     <img 
+            <Grid container sx={{alignItems:"center",justifyContent:"center"}}>
+               <Grid item sx={{display:"flex", justifyContent:"center", border:"0px solid white",p:1}}  >
+                  <div style={{display:"flex", justifyContent:"center",border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
+
+                     <Avatar 
                         src={imgWallpaper} 
-                        alt="juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper" 
-                        style={{width:"100%",opacity:0.8}} 
-                        srcSet={`${imgWallpaper} 1200w, ${imgWallpaper} 600w`}
-                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 100vw"
-                        loading='lazy'
+                        alt="juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"
+                        sx={{
+                           // border:"2px solid blue",
+                           pb:{lg:0,xl:4},
+                           borderRadius:0,
+                           height:{xs:"auto",md:"130px", lg:"auto",xl:"300px"}, 
+                           width:{xs:"auto",md:"130px",lg:"auto",xl:"600px"}
+                        }}
+                        imgProps={{
+                           sx:{
+                              // border:"2px solid red",
+                              pb:{xs:1,md:0},
+                              height:{xs:"200px",md:"200px",lg:"250px",xl:"300px"}, 
+                              width:{xs:"380px",md:"400px",lg:"500px",xl:"600px"},
+                           },
+                        }}
                      />
+
                   </div>
                </Grid>
             </Grid>

@@ -30,10 +30,10 @@ const About: React.FC<AboutProps> = () => {
                <Grid container 
                   sx={{background:"rgba(0,0,0,0.5)",backdropFilter: "sepia(0.8)", 
                      m:{xs:"6px 0px",md:0,lg:"0px 1px",xl:"0px 0px"},
-                     p:{xs:1,md:2,lg:1.5,xl:4.5},border:"1px solid purple", borderRadius:2, justifyContent:"center",                     
+                     p:{xs:1,md:2,lg:2.5,xl:1.5},border:"1px solid purple", borderRadius:2, justifyContent:"center",                     
                   }}
                >
-                  <Grid item xs={12} sx={{pt:{xs:4,lg:8,xl:10}}}></Grid>
+                  <Grid item xs={12} sx={{pt:{xs:4,lg:6,xl:7}}}></Grid>
                   <Grid item xs={4} lg={9} xl={7} sx={{display:"flex",justifyContent:"center",pb:{xs:1,lg:1.5,xl:1.5}}}>
                      <Avatar src={avatarIMG} alt="juliana-rodrigues-advogada"  // 
                         sx={{
@@ -52,9 +52,9 @@ const About: React.FC<AboutProps> = () => {
                         }}
                      />
                   </Grid>
-                  <Grid item xs={12}  ><Typography variant={"h6"} sx={{border:"0px solid blue",color:"#fff"}}>Advogada Trabalhista</Typography></Grid>
+                  <Grid item xs={12}><Typography variant={"h6"} sx={{border:"0px solid blue",color:"#fff"}}>Advogada Trabalhista</Typography></Grid>
                   <Grid item xs={12}><Typography variant={"body2"} sx={{color:"#fff"}} >OAB/AM - 10547</Typography></Grid>
-                  <Grid item xs={12} sx={{pb:4}} ></Grid>
+                  <Grid item xs={12} sx={{pt:{xs:4,lg:6,xl:7}}}></Grid>
                </Grid>
             </MagicCard>
          </Grid>
@@ -63,10 +63,10 @@ const About: React.FC<AboutProps> = () => {
             
             <Grid container sx={{ gap:3, textAlign:{xs:"justify",md:"justify"} }} >
                <Grid item xs={12}>
-                  <Typography variant={"h1"} 
+                  <Typography variant={"h3"} 
                      sx={{
                         border:"0px solid red",color:textColorBlack, 
-                        fontSize:{xs:"1.4rem",md:"1.2rem",lg:"1.5rem",xl:"2rem",},
+                        // fontSize:{xs:"1.4rem",md:"1.2rem",lg:"1.5rem",xl:"1.9rem",},
                         textAlign:{xs:"center",md:"center",lg:"left",xl:"left"}
                      }}
                   >
@@ -97,7 +97,7 @@ const About: React.FC<AboutProps> = () => {
 
          </Grid>
 
-         <Grid item xs={12} sx={{pb:2,m:0,color:"#e9e7e1",fontSize:"1rem",border:"0px solid red"}}>advogada</Grid>
+         <Grid item xs={12} sx={{pb:2,m:0,color:"#e9e7e1",fontSize:"1rem",border:"0px solid red"}}></Grid>
       </Grid>
    )
 }

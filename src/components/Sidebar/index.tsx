@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Grid, Link, Typography } from '@mui/material';
+import { Divider, Grid, Link, Typography } from '@mui/material';
 
 const Sidebar: React.FC = () => {
 
@@ -48,32 +48,38 @@ const Sidebar: React.FC = () => {
             <Grid container sx={{gap:5, border:"0px solid white", display:{xs:"block", md:"flex"}, pr:{lg:2}  }}>
                {menuList.map((item,index) => {
                   return(
-                     <Grid item key={index} sx={{ border:"0px solid red", p:"0px 0px",    }} >
+                     <Grid item key={index} sx={{ border:"0px solid red", p:"0px 0px",  }} >
                         <Link href={item.href} 
                            sx={{ 
                               color: "#DAA520", 
-                              
-                              // padding:0.4,
-                              borderRadius:1,
-                              
+                              lineHeight:"0px",
                               textDecoration:"none",
                            }} 
                         >
-                           <Typography variant='body2' 
-                              sx={{
-                                 fontSize:"0.9rem",
-                                 p:0,m:0, lineHeight:"30px",
-         
-                                 // '&:hover': {borderBottom: '2px solid red', color: "white", }, 
-                                 borderBottom: item.href === activeSection ? '2px solid white' : 'none',
-                                 // border:"1px solid blue",
-                                 // padding:"10px 0px",
-                              }} 
-                           >
-                              {item.label}
-                           </Typography>
-       
-                             
+                           <Grid container sx={{gap:{xs:0,md:0}, p:{xs:"16px 0px",md:0} ,justifyContent:"center", border:"0px solid red", textAlign:"center"}} >
+                              
+                              <Grid item xs={12} sx={{border:"0px solid red",p:0,m:0}}>
+                                 <Typography variant='body2' 
+                                    sx={{
+                                       fontSize:"0.9rem",
+                                       p:{xs:0.5,md:0},m:0, lineHeight:"30px",
+                                       border:"0px solid white",
+                                       '&:hover': {color: "white", }, 
+                                    }} 
+                                 >
+                                    {item.label}
+                                 </Typography>
+                              </Grid>
+
+                              <Grid item sx={{border:"0px solid blue",}}>
+                                 <Divider 
+                                    sx={{ 
+                                       width:{xs:"50px"}, lineHeight:"0px", 
+                                       borderBottom: item.href === activeSection ? '2px solid white' : 'none',
+                                    }} 
+                                 />
+                              </Grid>
+                           </Grid>
                         </Link>
                      </Grid>
                   )

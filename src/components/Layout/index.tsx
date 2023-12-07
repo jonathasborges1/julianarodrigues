@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className='layout-container' style={{display:"flex",justifyContent:"center", justifyItems:"center", border:"0px solid white",padding:0,margin:0}} >
 
       {/* AppBar (Desktop) */}
-      <AppBar className='AppBar-do-jhon' position="fixed" sx={{background:"rgba(0,0,0,.3)",border:"0px solid blue"}} >
+      <AppBar className='AppBar-do-jhon' position="fixed" sx={{background:"rgba(0,0,0,0.6)",border:"0px solid blue"}} >
         <Toolbar className='Toolbar-do-jhon' >
           <Grid className='Toolbar-Grid-container' container sx={{ justifyContent:{xs:"center", md:"space-between"}, textAlign:"center", }}>
             
@@ -50,8 +50,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             </Grid>
 
-            <Grid item sx={{border:"0px solid blue"}} >
-              {/* Mostra apenas na versão desktop */}
+            <Grid item sx={{border:"0px solid blue"}}>
+{/*  VERSAO DESKTOP  */}
               <Hidden mdDown>  
                 <Sidebar />
               </Hidden>
@@ -72,6 +72,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Toolbar>
       </AppBar> 
 
+{/*  VERSAO MOBILE  */}
       {/* Drawer (Mobile) */}
       <Hidden lgUp implementation="css">
         <Drawer
@@ -81,7 +82,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           onClose={handleDrawerToggle}
           PaperProps={
             {
-              sx:{background:"#000"},
+              sx:{background:"rgba(0,0,0,0.6)"},
               tabIndex: -1  // Adicione esta linha para remover o foco
             }
           }

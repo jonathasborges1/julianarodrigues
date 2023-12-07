@@ -16,7 +16,7 @@ interface SinglePageApplicationProps {
 const SinglePageApplication: React.FC<SinglePageApplicationProps> = ({ children, }) => {
    return (
       <Layout>
-         <Grid container className='SinglePageApplication' sx={{p:0, gap:5, justifyContent:"center", border:"0px solid red"}} > {/* Precisa ser padding 0 */}
+         <Grid container className='SinglePageApplication' sx={{p:0, gap:2, justifyContent:"center", border:"0px solid red"}} > {/* Precisa ser padding 0 */}
             <Grid item xs={12} sx={{display:""}} > <Home/> </Grid>
             <Grid item xs={12} sx={{display:""}}> <About/> </Grid>
             <Grid item xs={12}> <Service/> </Grid>

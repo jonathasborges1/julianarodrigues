@@ -43,7 +43,7 @@ const theme = createTheme({
         fontSize: '2.3rem', // Para telas large (lg) e maiores
       },
       '@media (min-width:1536px)': {
-        fontSize: '3rem', // Para telas extra-large (xl) e maiores
+        fontSize: '2.6rem', // Para telas extra-large (xl) e maiores
       },
     },
     body1:{

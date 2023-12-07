@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className='layout-container' style={{display:"flex",justifyContent:"center", justifyItems:"center", border:"1px solid white",padding:0,margin:0}} >
+    <div className='layout-container' style={{display:"flex",justifyContent:"center", justifyItems:"center", border:"0px solid white",padding:0,margin:0}} >
 
       {/* AppBar (Desktop) */}
       <AppBar className='AppBar-do-jhon' position="fixed" sx={{background:"rgba(0,0,0,.3)",border:"0px solid blue"}} >

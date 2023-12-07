@@ -30,20 +30,29 @@ const About: React.FC<AboutProps> = () => {
                <Grid container 
                   sx={{background:"rgba(0,0,0,0.5)",backdropFilter: "sepia(0.8)", 
                      m:{xs:"6px 0px",md:0,lg:"0px 1px",xl:"0px 0px"},
-                     p:{xs:1,md:2,lg:2,xl:4},border:"1px solid purple", borderRadius:2, justifyContent:"center",                     
+                     p:{xs:1,md:2,lg:1.5,xl:4.5},border:"1px solid purple", borderRadius:2, justifyContent:"center",                     
                   }}
                >
-                  <Grid item xs={12} sx={{pt:{xs:4,lg:4,xl:10}}}></Grid>
-                  <Grid item xs={4} lg={9} xl={7} sx={{display:"flex",justifyContent:"center"}} >
-                     <Avatar src={avatarIMG} alt="juliana-rodrigues-advogada" 
+                  <Grid item xs={12} sx={{pt:{xs:4,lg:8,xl:10}}}></Grid>
+                  <Grid item xs={4} lg={9} xl={7} sx={{display:"flex",justifyContent:"center",pb:{xs:1,lg:1.5,xl:1.5}}}>
+                     <Avatar src={avatarIMG} alt="juliana-rodrigues-advogada"  // 
                         sx={{
                            opacity:0.9, 
-                           height:{xs:"120px",md:"75%",lg:"95%",xl:"90%"}, 
-                           width:{xs:"120px",md:"75%",lg:"75%",xl:"90%"}
+                           // border:"1px solid blue",
+                           height:{xs:"120px",md:"130px", lg:"140px",xl:"150px"}, 
+                           width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}
+                        }}
+                        imgProps={{
+                           sx:{
+                              // border:"5px solid red",
+                              height:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}, 
+                              width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
+                           },
+                           loading:"lazy"
                         }}
                      />
                   </Grid>
-                  <Grid item xs={12} sx={{zIndex:"1"}} ><Typography variant={"h6"} sx={{border:"0px solid blue",color:"#fff"}}>Advogada Trabalhista</Typography></Grid>
+                  <Grid item xs={12}  ><Typography variant={"h6"} sx={{border:"0px solid blue",color:"#fff"}}>Advogada Trabalhista</Typography></Grid>
                   <Grid item xs={12}><Typography variant={"body2"} sx={{color:"#fff"}} >OAB/AM - 10547</Typography></Grid>
                   <Grid item xs={12} sx={{pb:4}} ></Grid>
                </Grid>

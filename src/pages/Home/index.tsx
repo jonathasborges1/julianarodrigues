@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
 
-import imgWallpaper from '../../assets/wallpaper-small.png'
+import imgWallpaper from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper.webp'
 import ArrowAnimated from '../../components/ArrowAnimated';
 import ButtonPulse from '../../components/ButtonPulse';
 
@@ -38,7 +38,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                   justifyContent:"center", 
                }}>
                <Grid item>
-                  <Typography variant={"h1"} sx={{fontSize:{xl:"2.6rem"}}} >
+                  <Typography variant={"h1"}  >
                      Advocacia Especializada em <b>direito trabalhista</b>.
                   </Typography>
                </Grid>
@@ -51,7 +51,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                <Grid item sx={{p:2}}>
 
                   <ButtonPulse variant={"contained"} onClick={handleWhatsappContant} >
-                     <Typography variant='body1' sx={{fontWeight:700, fontSize:{xs:"0.8rem",md:"1.1rem"}}} >Falar com um advogado</Typography>
+                     <Typography variant='body1' sx={{fontWeight:700, fontSize:{xs:"1rem",md:"1rem"}}} >Falar com um advogado</Typography>
                   </ButtonPulse>
                   
                </Grid>
@@ -63,7 +63,14 @@ const Home: React.FC<HomeProps> = ({ children }) => {
             <Grid container sx={{alignItems:"center"}}>
                <Grid item sx={{display:"flex"}} >
                   <div style={{border:"1px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
-                     <img src={imgWallpaper} alt="direito-trabalhista-imagem-agente-limpeza" style={{width:"100%",opacity:0.8}} />
+                     <img 
+                        src={imgWallpaper} 
+                        alt="juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper" 
+                        style={{width:"100%",opacity:0.8}} 
+                        srcSet={`${imgWallpaper} 1200w, ${imgWallpaper} 600w`}
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 100vw"
+                        loading='lazy'
+                     />
                   </div>
                </Grid>
             </Grid>

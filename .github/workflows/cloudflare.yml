@@ -22,7 +22,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies [1]
-        run: npm install -g npm@10.2.2
+        run: npm install -g npm@10.2.5
 
       - name: Install dependencies [2]
         run: npm install --legacy-peer-deps

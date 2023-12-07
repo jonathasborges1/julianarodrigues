@@ -7,6 +7,9 @@ const port = parseInt(process.env.PORT ?? '5000', 10);
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build:{
+    outDir: 'build', // Altere para o nome do diretório desejado de 'dist' para 'build'
+  },
   plugins: [
     react(),
     svgr(),

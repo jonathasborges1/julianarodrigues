@@ -1,15 +1,19 @@
 import React from 'react';
-import { Avatar, Grid, Typography } from '@mui/material';
+import { Avatar, Grid, Typography, useMediaQuery } from '@mui/material';
 
-import imgWallpaper from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper.webp'
+import imgWallpaper from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper.webp';
+import imgWallpaperMobile from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper-mobile.webp';
 import ArrowAnimated from '../../components/ArrowAnimated';
 import ButtonPulse from '../../components/ButtonPulse';
+import theme from '../../theme';
 
 interface HomeProps {
    children?: React.ReactNode;
 }
 
 const Home: React.FC<HomeProps> = ({ children }) => {
+
+   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // abaixo de sm = xs
 
    const handleWhatsappContant = () => {
       const phoneNumber = '5592982301415'; // Coloque o número de telefone desejado
@@ -64,8 +68,8 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                   <div style={{display:"flex", justifyContent:"center",border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
 
                      <Avatar 
-                        src={imgWallpaper} 
-                        alt="juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"
+                        src={isMobile ? imgWallpaperMobile : imgWallpaper} 
+                        alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
                         sx={{
                            // border:"2px solid blue",
                            pb:{lg:0,xl:4},
@@ -80,7 +84,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                               height:{xs:"200px",md:"200px",lg:"250px",xl:"300px"}, 
                               width:{xs:"380px",md:"400px",lg:"500px",xl:"600px"},
                            },
-                           srcSet: `${imgWallpaper} 380w, ${imgWallpaper} 500w, ${imgWallpaper} 600w`,
+                           srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
                            sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                         }}
                      />

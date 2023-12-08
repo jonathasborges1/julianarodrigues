@@ -80,6 +80,8 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                               height:{xs:"200px",md:"200px",lg:"250px",xl:"300px"}, 
                               width:{xs:"380px",md:"400px",lg:"500px",xl:"600px"},
                            },
+                           srcSet: `${imgWallpaper} 380w, ${imgWallpaper} 500w, ${imgWallpaper} 600w`,
+                           sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                         }}
                      />
 

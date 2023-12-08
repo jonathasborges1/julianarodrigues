@@ -1,14 +1,18 @@
 import React from 'react';
-import { Avatar, Typography, Grid } from '@mui/material';
+import { Avatar, Typography, Grid, useMediaQuery } from '@mui/material';
 
-import avatarIMG from '../../assets/juliana-rodrigues-advogada-avatar.webp'
+import avatarIMG from '../../assets/juliana-rodrigues-advogada-avatar.webp';
+import avatarIMGMOBILE from '../../assets/juliana-rodrigues-advogada-avatar-mobile.webp';
 import MagicCard from '../../components/MagicCard';
+import theme from '../../theme';
 
 interface AboutProps {
    children?: React.ReactNode;
 }
 
 const About: React.FC<AboutProps> = () => {
+
+   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // abaixo de sm = xs
    
    const textColorBlack = "#000";
    const backgroundColorWhite = "#b5b5b5" // 212534 // e9e7e1
@@ -35,7 +39,7 @@ const About: React.FC<AboutProps> = () => {
                >
                   <Grid item xs={12} sx={{pt:{xs:4,lg:6,xl:7}}}></Grid>
                   <Grid item xs={4} lg={9} xl={7} sx={{display:"flex",justifyContent:"center",pb:{xs:1,lg:1.5,xl:1.5}}}>
-                     <Avatar src={avatarIMG} alt="juliana-rodrigues-advogada"  // 
+                     <Avatar src={isMobile ? avatarIMGMOBILE : avatarIMG } alt={isMobile ? "juliana-rodrigues-advogada-mobile" : "juliana-rodrigues-advogada-desktop"}  // 
                         sx={{
                            opacity:0.9, 
                            // border:"1px solid blue",
@@ -48,7 +52,9 @@ const About: React.FC<AboutProps> = () => {
                               height:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}, 
                               width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
                            },
-                           loading:"lazy"
+                           srcSet: `${avatarIMGMOBILE} 380w, ${avatarIMG} 500w, ${avatarIMG} 600w`,
+                           sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
+                           // loading:"lazy"
                         }}
                      />
                   </Grid>

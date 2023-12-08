@@ -2,7 +2,8 @@ import React from 'react';
 import { Avatar, Typography, Grid, useMediaQuery } from '@mui/material';
 
 import avatarIMG from '../../assets/juliana-rodrigues-advogada-avatar.webp';
-import avatarIMGMOBILE from '../../assets/juliana-rodrigues-advogada-avatar-mobile.webp';
+
+import avatarIMGMOBILE from '../../assets/juliana-rodrigues-advogada-avatar-mobile-120x125.webp';
 import MagicCard from '../../components/MagicCard';
 import theme from '../../theme';
 
@@ -17,13 +18,13 @@ const About: React.FC<AboutProps> = () => {
    const textColorBlack = "#000";
    const backgroundColorWhite = "#b5b5b5" // 212534 // e9e7e1
 
-   const responsiveStyle = isMobile ? {
-      height: '120px', 
-      width:"120px",
-   } : {
-      height: '150px', 
-      width:"150px",
-   }
+   // const responsiveStyle = isMobile ? {
+   //    height: '120px', 
+   //    width:"120px",
+   // } : {
+   //    height: '150px', 
+   //    width:"150px",
+   // }
 
    return (
       <Grid id={"about"} container 
@@ -53,21 +54,22 @@ const About: React.FC<AboutProps> = () => {
                          
                         sx={{
                            opacity:0.9, 
-                           // border:"1px solid blue",
-                           height:{xs:"120px",md:"130px", lg:"140px",xl:"150px"}, 
-                           width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}
+                           // border:"3px solid blue",
+                           width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
+                           height:{xs:"125px",md:"130px", lg:"140px",xl:"150px"}, 
+                           
                         }}
                         imgProps={{
-                           width: isMobile ? "120px" : "150px",
-                           height: isMobile? "120px" : "150px",
+                           width:  isMobile ? "120px" : "150px",  
+                           height: isMobile ? "125px" : "150px",
                            sx:{
                               // border:"5px solid red",
                               height:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}, 
                               width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
                            },
-                           style:responsiveStyle,
-                           srcSet: `${avatarIMGMOBILE} 380w, ${avatarIMG} 500w, ${avatarIMG} 600w`,
-                           sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
+                           // style:responsiveStyle,
+                           // srcSet: `${avatarIMGMOBILE} 380w, ${avatarIMG} 500w, ${avatarIMG} 600w`,
+                           // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                            // loading:"lazy"
                         }}
                      />

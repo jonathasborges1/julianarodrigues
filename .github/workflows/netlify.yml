@@ -24,15 +24,31 @@ jobs:
       - name: Build
         run: npm run build
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-      - name: Deploy to Netlify
-        uses: netlify/actions/cli@main
+      - name: Netlify Deploy
+      #   uses: jsmrcaga/action-netlify-deploy@v1.7.1
+        uses: nwtgck/actions-netlify@v2.0
         with:
-          args: deploy --prod
+         publish-dir: './build'
+         production-branch: main
+         github-token: ${{ secrets.TOKEN_GITHUB }}
+         deploy-message: "Deploy from GitHub Actions"
+         enable-pull-request-comment: false
+         enable-commit-comment: true
+         overwrites-pull-request-comment: true
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}   
+      #   run: netlify deploy --prod
+
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     needs: build
+
+#     steps:
+#       - name: Deploy to Netlify
+#         uses: netlify/actions/cli@main
+#         with:
+#           args: deploy --prod
+#         env:
+#           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

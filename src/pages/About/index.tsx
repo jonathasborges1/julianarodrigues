@@ -17,6 +17,14 @@ const About: React.FC<AboutProps> = () => {
    const textColorBlack = "#000";
    const backgroundColorWhite = "#b5b5b5" // 212534 // e9e7e1
 
+   const responsiveStyle = isMobile ? {
+      height: '120px', 
+      width:"120px",
+   } : {
+      height: '150px', 
+      width:"150px",
+   }
+
    return (
       <Grid id={"about"} container 
          sx={{
@@ -39,7 +47,10 @@ const About: React.FC<AboutProps> = () => {
                >
                   <Grid item xs={12} sx={{pt:{xs:4,lg:6,xl:7}}}></Grid>
                   <Grid item xs={4} lg={9} xl={7} sx={{display:"flex",justifyContent:"center",pb:{xs:1,lg:1.5,xl:1.5}}}>
-                     <Avatar src={isMobile ? avatarIMGMOBILE : avatarIMG } alt={isMobile ? "juliana-rodrigues-advogada-mobile" : "juliana-rodrigues-advogada-desktop"}  // 
+                     <Avatar 
+                        src={isMobile ? avatarIMGMOBILE : avatarIMG } 
+                        alt={isMobile ? "juliana-rodrigues-advogada-mobile" : "juliana-rodrigues-advogada-desktop"} 
+                         
                         sx={{
                            opacity:0.9, 
                            // border:"1px solid blue",
@@ -47,11 +58,14 @@ const About: React.FC<AboutProps> = () => {
                            width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}
                         }}
                         imgProps={{
+                           width: isMobile ? "120px" : "150px",
+                           height: isMobile? "120px" : "150px",
                            sx:{
                               // border:"5px solid red",
                               height:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}, 
                               width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
                            },
+                           style:responsiveStyle,
                            srcSet: `${avatarIMGMOBILE} 380w, ${avatarIMG} 500w, ${avatarIMG} 600w`,
                            sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                            // loading:"lazy"

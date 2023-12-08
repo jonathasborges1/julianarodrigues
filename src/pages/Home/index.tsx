@@ -3,8 +3,10 @@ import { Avatar, Grid, Typography, useMediaQuery } from '@mui/material';
 
 import imgWallpaper from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper.webp';
 import imgWallpaperMobile from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper-mobile.webp';
+
 import ArrowAnimated from '../../components/ArrowAnimated';
 import ButtonPulse from '../../components/ButtonPulse';
+
 import theme from '../../theme';
 
 interface HomeProps {
@@ -70,6 +72,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                      <Avatar 
                         src={isMobile ? imgWallpaperMobile : imgWallpaper} 
                         alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
+                        
                         sx={{
                            // border:"2px solid blue",
                            pb:{lg:0,xl:4},
@@ -78,14 +81,16 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                            width:{xs:"auto",md:"130px",lg:"auto",xl:"600px"}
                         }}
                         imgProps={{
+                           width: isMobile ? "380px" : "600px",
+                           height: isMobile ? "200px" : "300px",
                            sx:{
                               // border:"2px solid red",
                               pb:{xs:1,md:0},
                               height:{xs:"200px",md:"200px",lg:"250px",xl:"300px"}, 
                               width:{xs:"380px",md:"400px",lg:"500px",xl:"600px"},
                            },
-                           srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
-                           sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
+                           // srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
+                           // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                         }}
                      />
 

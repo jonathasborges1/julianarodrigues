@@ -18,14 +18,6 @@ const About: React.FC<AboutProps> = () => {
    const textColorBlack = "#000";
    const backgroundColorWhite = "#b5b5b5" // 212534 // e9e7e1
 
-   // const responsiveStyle = isMobile ? {
-   //    height: '120px', 
-   //    width:"120px",
-   // } : {
-   //    height: '150px', 
-   //    width:"150px",
-   // }
-
    return (
       <Grid id={"about"} container 
          sx={{
@@ -34,16 +26,28 @@ const About: React.FC<AboutProps> = () => {
             border:"0px solid yellow",
             background:backgroundColorWhite,
             justifyContent:"center",
+            display:"flex",
+            justifyItems:"center",
+            // background:`linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(181, 181, 181, 0.9), rgba(181, 181, 181, 0.8),rgba(181, 181, 181, 0.7) ,rgba(181, 181, 181, 1) )`,
+
          }}
       >
          <Grid item xs={12} sx={{pt:2}}></Grid>
          
-         <Grid item xs={11} md={10} lg={3.1} xl={3} sx={{border:"0px solid red", textAlign:"center",display:"flex",flexDirection:"column",justifyContent:"center"}}>
-            <MagicCard>
+         <Grid item xs={11} md={10} lg={3.1} xl={3} 
+            sx={{
+                  border:"0px solid blue", 
+                  textAlign:"center",
+
+               }}
+               >
+
+            <MagicCard sx={{opacity:0.9}}>
                <Grid container 
-                  sx={{background:"rgba(0,0,0,0.5)",backdropFilter: "sepia(0.8)", 
-                     m:{xs:"6px 0px",md:0,lg:"0px 1px",xl:"0px 0px"},
-                     p:{xs:1,md:2,lg:2.5,xl:1.5},border:"1px solid purple", borderRadius:2, justifyContent:"center",                     
+                  sx={{
+                     border:"0px solid purple",borderRadius:2,
+                     background:"rgba(0,0,0,0.5)",backdropFilter: "sepia(0.8)", justifyContent:"center", 
+                     m:{xs:"6px 0px",md:"6px 0px",lg:"6px 0px",xl:"6px 0px"},                    
                   }}
                >
                   <Grid item xs={12} sx={{pt:{xs:4,lg:6,xl:7}}}></Grid>

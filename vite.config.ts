@@ -28,6 +28,7 @@ export default defineConfig({
       output: {
         sourcemap: false,
         manualChunks: {
+          react: ['react'],
           router: ['react-router-dom'],
           // ethers: ['ethers'],
           // rtk: ['@reduxjs/toolkit'],

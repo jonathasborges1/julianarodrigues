@@ -29,7 +29,14 @@ const Home: React.FC<HomeProps> = ({ children }) => {
    }
 
    return (
-      <Grid id={"home"} container sx={{p:0, justifyContent:"center", border:"0px solid blue",gap:{xs:3,md:3,lg:5,xl:6}}}>
+      <Grid id={"home"} container 
+         sx={{
+            border:"0px solid blue",
+            p:0, justifyContent:"center", 
+            gap:{xs:3,md:3,lg:5,xl:6},
+            background:`linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(181, 181, 181, 0.25), rgba(181, 181, 181, 0.35),rgba(181, 181, 181, 0.45) ,rgba(181, 181, 181, 0.1) )`, // b5b5b5
+         }}
+      >
 
          <Grid item xs={12} sx={{ pt:{xs:"4rem",md:"5rem"} }}></Grid>
          

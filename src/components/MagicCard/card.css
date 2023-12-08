@@ -9,27 +9,17 @@
    --card-width: calc(var(--card-height) / 1.5);
  }
  
- 
- body {
-   min-height: 100vh;
-   background: #212534;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   /* padding-top: 2rem; */
-   /* padding-bottom: 2rem; */
-   box-sizing: border-box;
- }
- 
- 
+
  .card {
    background: #191c29; 
-   width: var(--card-width);
-   height: var(--card-height);
+   /* width: var(--card-width); */
+   width:auto;
+   /* height: var(--card-height); */
+   height:auto;
    /* padding: 1px; */
    position: relative;
    border-radius: 6px;
-   display: flex;
+   display: inline-flex;
    justify-content: center;
    align-items: center;
    text-align: center;

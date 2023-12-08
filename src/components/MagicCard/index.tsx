@@ -1,16 +1,24 @@
 import './card.css'; 
 import React from 'react';
-import { Paper } from '@mui/material';
+import { Paper, PaperProps } from '@mui/material';
 
 
-interface Props {
+interface Props extends PaperProps {
    children?: React.ReactNode;
 }
 
-const MagicCard: React.FC<Props> = ({ children }) => {
+const MagicCard: React.FC<Props> = ({ children, ...props }) => {
    //
    return (
-    <Paper className='card' variant="outlined" sx={{ width:"100%", height:"100%" , background: "none", zIndex:0, border: "0px solid red"  }}>
+    <Paper className='card' variant="outlined" 
+         sx={{ 
+            border: "0px solid red",
+            width:"100%", height:"100%", 
+            background: "none", zIndex:0, 
+            display:"inline-flex", justifyContent:"center",justifyItems:"center", 
+         }}
+         {...props}
+      >
       {children}
     </Paper>
    )

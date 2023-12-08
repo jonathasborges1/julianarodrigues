@@ -2,9 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 // import svgr from "vite-plugin-svgr";
 import svgr from '@svgr/rollup';
-import commonjs from '@rollup/plugin-commonjs';
+// import commonjs from '@rollup/plugin-commonjs';
 import { VitePWA } from 'vite-plugin-pwa'
-
 
 const port = parseInt(process.env.PORT ?? '5000', 10);
 
@@ -13,7 +12,7 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
-    commonjs(),
+    // commonjs(),
     VitePWA(),
   ],
   build:{

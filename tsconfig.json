@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "types": ["vite/client"],
-    // "target": "ES2020",
-    "target": "ESNext",
+    "target": "ES2020",
+    // "target": "ESNext",
     "useDefineForClassFields": true,
     // "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -11,8 +11,8 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    // "moduleResolution": "Node",
+    // "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -25,7 +25,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "allowJs": false,
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    // "allowJs": false,
     "baseUrl": ".",
     "paths": {
       "ethers": ["node_modules/ethers"]

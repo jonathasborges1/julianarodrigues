@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "vite --port 5000 --host 0.0.0.0",
-    "build": "tsc && vite build && yarn compress-webp",
-    "compress-webp": "npx imagemin-cli 'build/assets/**/*.webp' --use=imagemin-mozjpeg --use=imagemin-pngquant",
+    "build": "tsc && vite build && npm run compress-webp",
+    "compress-webp": "npx imagemin-cli 'build/assets/**/*.webp' --out-dir=build --use=imagemin-mozjpeg --use=imagemin-pngquant",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start-ngrok": "ngrok http 5000",

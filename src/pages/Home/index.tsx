@@ -34,7 +34,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
             border:"0px solid blue",
             p:0, justifyContent:"center", 
             gap:{xs:3,md:3,lg:5,xl:6},
-            background:`linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(181, 181, 181, 0.25), rgba(181, 181, 181, 0.35),rgba(181, 181, 181, 0.45) ,rgba(181, 181, 181, 0.1) )`, // b5b5b5
+            // background:`linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(181, 181, 181, 0.25), rgba(181, 181, 181, 0.35),rgba(181, 181, 181, 0.45) ,rgba(181, 181, 181, 0.1) )`, // b5b5b5
          }}
       >
 
@@ -79,7 +79,6 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                      <Avatar 
                         src={isMobile ? imgWallpaperMobile : imgWallpaper} 
                         alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
-                        
                         sx={{
                            // border:"2px solid blue",
                            pb:{lg:0,xl:4},
@@ -88,8 +87,8 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                            width:{xs:"auto",md:"130px",lg:"auto",xl:"600px"}
                         }}
                         imgProps={{
-                           width: isMobile ? "380px" : "600px",
-                           height: isMobile ? "200px" : "300px",
+                           width: isMobile ? "380" : "600",
+                           height: isMobile ? "200" : "300",
                            sx:{
                               // border:"2px solid red",
                               pb:{xs:1,md:0},

@@ -4,9 +4,8 @@ import { Divider, Grid, Link, Typography } from '@mui/material';
 const Sidebar: React.FC = () => {
 
    const [activeSection, setActiveSection] = useState<string | null>(window.location.hash || "#home");
-   console.log("activeSection: ",activeSection)
 
-   const menuList = useMemo(() =>{
+   const menuList = useMemo(() => {
       return [
          {
             label: "Página Inicial",
@@ -20,7 +19,7 @@ const Sidebar: React.FC = () => {
             label: "Área de atuação",
             href: "#service"
          },
-   ]
+      ]
    },[]);
 
    useEffect(() => {

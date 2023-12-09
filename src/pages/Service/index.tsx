@@ -1,10 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { Divider, Grid, Typography, useTheme } from '@mui/material';
-// import BalanceOutlinedIcon from '@mui/icons-material/BalanceOutlined';
-// import GavelTwoToneIcon from '@mui/icons-material/GavelTwoTone';
-// import AccountBalanceTwoToneIcon from '@mui/icons-material/AccountBalanceTwoTone';
-// import backgroundLawOrder from "../../assets/background-balance.png"
 
 import { BalanceIcon, CourtIcon, GavelIcon } from '../../components/Icons';
 
@@ -15,34 +11,68 @@ interface ServiceProps {
    children?: React.ReactNode;
 }
 
-const Service: React.FC<ServiceProps> = ({ children }) => {
+const Service: React.FC<ServiceProps> = () => {
 
    const theme = useTheme();
-   const gold = theme.palette.custom.gold;
+   
+   const mapMemo = useMemo(() =>{
+      
+      const gold = theme.palette.custom.gold;
 
-   const iconStyle = {
-      fontSize:"3rem",
-      color:gold
-   }
-
-   const conteudo = [
-      {
-         icon: <GavelIcon sx={iconStyle}/>, // gavelIcon GavelTwoToneIcon
-         title: "DIREITO TRABALHISTA",
-         subtitle:"É o ramo do direito que contém normas jurídicas relacionadas com a estrutura, organização e proteção da família. Trata das relações familiares e das obrigações e direitos decorrentes dessas relações, ou seja, regula e estabelece as normas de convivência familiar...",
-      },
-      {
-         icon: <BalanceIcon sx={iconStyle}/>, // BalanceIcon - BalanceOutlinedIcon
-         title: "DIREITO DO CONSUMIDOR",
-         subtitle:"É o ramo do direito que lida com as relações jurídicas entre fornecedores de bens e serviços e seus consumidores. Tem por objetivo assegurar que os consumidores obtenham acesso a informações quanto a origem e qualidade dos produtos e serviços..."
-      },
-      {
-         icon: <CourtIcon sx={iconStyle}/>,//AccountBalanceTwoToneIcon
-         title: "DIREITO PREVIDENCIARIO",
-         subtitle:`É a área jurídica que regem a seguridade social e os direitos relacionados aos benefícios previdenciários. 
-                  o Direito Previdenciário engloba temas como aposentadoria, pensões, auxílios e demais prestações destinadas a assegurar a dignidade do trabalhador...`
+      const iconStyle = {
+         fontSize:"3rem",
+         color:gold
       }
-   ]
+
+      const conteudo = [
+         {
+            icon: <GavelIcon sx={iconStyle}/>, // gavelIcon GavelTwoToneIcon
+            title: "DIREITO TRABALHISTA",
+            subtitle:"É o ramo do direito que contém normas jurídicas relacionadas com a estrutura, organização e proteção da família. Trata das relações familiares e das obrigações e direitos decorrentes dessas relações, ou seja, regula e estabelece as normas de convivência familiar...",
+         },
+         {
+            icon: <BalanceIcon sx={iconStyle}/>, // BalanceIcon - BalanceOutlinedIcon
+            title: "DIREITO DO CONSUMIDOR",
+            subtitle:"É o ramo do direito que lida com as relações jurídicas entre fornecedores de bens e serviços e seus consumidores. Tem por objetivo assegurar que os consumidores obtenham acesso a informações quanto a origem e qualidade dos produtos e serviços..."
+         },
+         {
+            icon: <CourtIcon sx={iconStyle}/>,//AccountBalanceTwoToneIcon
+            title: "DIREITO PREVIDENCIARIO",
+            subtitle:`É a área jurídica que regem a seguridade social e os direitos relacionados aos benefícios previdenciários. 
+                     o Direito Previdenciário engloba temas como aposentadoria, pensões, auxílios e demais prestações destinadas a assegurar a dignidade do trabalhador...`
+         }
+      ]
+      return conteudo.map((item,index) => {
+         return(
+            <Grid item key={index} xs={12} lg={3.9} xl={3.8} sx={{p:{xs:2,md:2,lg:2,xl:2},border:"0px solid red"}} >
+               <Grid container sx={{gap:{xs:4,md:4,lg:2,xl:4}}}>
+
+                  <Grid item sx={{display:"flex", flexDirection:"row" ,justifyItems:"center", justifyContent:"center",border:"0px solid red"}}>
+                     {item.icon}
+                     <Typography variant={"h6"} 
+                        sx={{
+                           pl:1, m:0, lineHeight:"50px",fontWeight:600,
+                           fontSize:{
+                              xs:"1.3rem", 
+                              lg:"1.2rem",
+                              xl:"1.2rem"
+                           } 
+                        }} 
+                        >
+                           {item.title}
+                        </Typography>                  
+                  </Grid>
+
+                  <Grid item>
+                     <Typography variant={"body2"} sx={{textAlign:{xs:"justify"},lineHeight:{xs:"25px",lg:"30px"}}} >
+                        {item.subtitle}
+                     </Typography>
+                  </Grid>
+               </Grid>
+            </Grid>
+         )
+      })
+   },[theme]);
 
    return (
       <Grid id={"service"} className='service-container' container 
@@ -71,40 +101,17 @@ const Service: React.FC<ServiceProps> = ({ children }) => {
                </Grid>
 
 {/*AREAS DO DIREITO*/}
-               {conteudo.map((item,index) => {
-                  return(
-                     <Grid item key={index} xs={12} lg={3.9} xl={3.8} sx={{p:{xs:2,md:2,lg:2,xl:2},border:"0px solid red"}} >
-                        <Grid container sx={{gap:{xs:4,md:4,lg:2,xl:4}}}>
 
-                           <Grid item sx={{display:"flex", flexDirection:"row" ,justifyItems:"center", justifyContent:"center",border:"0px solid red"}}>
-                              {item.icon}
-                              <Typography variant={"h6"} 
-                                 sx={{
-                                    pl:1, m:0, lineHeight:"50px",fontWeight:600,
-                                    fontSize:{
-                                       xs:"1.3rem", 
-                                       lg:"1.2rem",
-                                       xl:"1.2rem"
-                                    } 
-                                 }} 
-                                 >
-                                    {item.title}
-                                 </Typography>                  
-                           </Grid>
-      
-                           <Grid item>
-                              <Typography variant={"body2"} sx={{textAlign:{xs:"justify"},lineHeight:{xs:"25px",lg:"30px"}}} >
-                                 {item.subtitle}
-                              </Typography>
-                           </Grid>
-                        </Grid>
-                     </Grid>
-                  )
-               })}
+               <Grid item xs={12}>
+                  <Grid container>
+                     {mapMemo}
+                  </Grid>
+               </Grid>
+               
             </Grid>
+
          </Grid>
 
-         {children}
       </Grid>
    )
 }

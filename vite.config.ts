@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react';
 import svgr from '@svgr/rollup';
 // import commonjs from '@rollup/plugin-commonjs';
 import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
+import viteImagemin from 'vite-plugin-imagemin';
+import imageminWebp from 'imagemin-webp';
 
 const port = parseInt(process.env.PORT ?? '5000', 10);
 
@@ -55,7 +57,25 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
-    VitePWA(manifestForPlugin)
+    VitePWA(manifestForPlugin),
+    viteImagemin({
+      gifsicle: { optimizationLevel: 3, interlaced: false, colors: 10 },
+      optipng: { optimizationLevel: 5 },
+      pngquant: { quality: [0.8, 0.9], speed: 4 },
+      svgo: {
+        plugins: [
+          {
+            name: 'removeViewBox',
+          },
+          {
+            name: 'removeEmptyAttrs',
+            active: false,
+          },
+        ],
+      },
+      webp: { quality: 6 },
+      mozjpeg: { quality: 75, progressive: true },
+    }),
   ],
   build:{
     sourcemap: false,
@@ -83,3 +103,11 @@ export default defineConfig({
     cors: true
   },
 });
+
+
+// Adicione o seguinte trecho no final do seu arquivo para configurar a compressão WebP separadamente
+const webpOptions = imageminWebp({
+  quality: 75,
+});
+
+export { webpOptions };

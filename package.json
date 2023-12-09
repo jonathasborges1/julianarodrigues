@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "vite --port 5000 --host 0.0.0.0",
-    "build": "tsc && vite build && npm run compress-webp",
+    "build": "npm run prune && tsc && vite build && npm run compress-webp",
+    "prune": "ts-prune",
     "compress-webp": "npx imagemin-cli 'build/assets/**/*.webp' --out-dir=build --use=imagemin-mozjpeg --use=imagemin-pngquant",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -41,6 +42,7 @@
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.2",
     "ngrok": "^5.0.0-beta.2",
+    "ts-prune": "^0.10.3",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vite-plugin-imagemin": "^0.6.1",

@@ -4,7 +4,8 @@ import { ThemeProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import theme from './theme';
-const App: React.FC = () => {
+
+export const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
@@ -14,4 +15,3 @@ const App: React.FC = () => {
   )
 }
 
-export default App;

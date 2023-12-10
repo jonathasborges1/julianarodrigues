@@ -34,7 +34,7 @@ const theme = createTheme({
         fontSize: '1.75rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
-        fontSize: '1rem', // Para telas small (sm) e maiores
+        fontSize: '1.5rem', // Para telas small (sm) e maiores
       },
       '@media (min-width:900px)': {
         fontSize: '1.5rem', // Para telas medium (md) e maiores
@@ -53,7 +53,7 @@ const theme = createTheme({
         fontSize: '1.4rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
-        fontSize: '1.45rem', // Para telas small (sm) e maiores
+        fontSize: '1.4rem', // Para telas small (sm) e maiores
       },
       '@media (min-width:900px)': {
         fontSize: '1.5rem', // Para telas medium (md) e maiores
@@ -72,13 +72,13 @@ const theme = createTheme({
         fontSize: '0.92rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
-        fontSize: '1rem', // Para telas small (sm) e maiores
+        fontSize: '0.8rem', // Para telas small (sm) e maiores
       },
       '@media (min-width:900px)': {
         fontSize: '1rem', // Para telas medium (md) e maiores
       },
       '@media (min-width:1200px)': {
-        fontSize: '1rem', // Para telas large (lg) e maiores
+        fontSize: '1.1rem', // Para telas large (lg) e maiores
       },
       '@media (min-width:1536px)': {
         fontSize: '1.1rem', // Para telas extra-large (xl) e maiores

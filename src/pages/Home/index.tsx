@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { Avatar, Grid, Typography, useMediaQuery } from '@mui/material';
 
 import imgWallpaper from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper.webp';
-import imgWallpaperMobile from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper-mobile.webp';
+import imgWallpaperMobile from '../../assets/juliana-rodrigues-advogada-manaus-wallpaper-mobile-375x190.webp';
 
 import ArrowAnimated from '../../components/ArrowAnimated';
 import ButtonPulse from '../../components/ButtonPulse';
@@ -13,7 +14,7 @@ interface HomeProps {
    children?: React.ReactNode;
 }
 
-const Home: React.FC<HomeProps> = ({ children }) => {
+const Home: React.FC<HomeProps> = () => {
 
    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // abaixo de sm = xs
 
@@ -40,7 +41,7 @@ const Home: React.FC<HomeProps> = ({ children }) => {
 
          <Grid item xs={12} sx={{ pt:{xs:"4rem",md:"5rem"} }}></Grid>
          
-         <Grid item xs={11} md={6} lg={4.5} sx={{pt:{xs:"0rem"},display:"flex", border:"0px solid red"}}>
+         <Grid item xs={11} sm={5} md={6} lg={4.5} sx={{pt:{xs:"0rem"},display:"flex", border:"0px solid red"}}>
             <Grid container 
                sx={{
                   justifyItems:"center",
@@ -70,39 +71,39 @@ const Home: React.FC<HomeProps> = ({ children }) => {
                
             </Grid>
          </Grid>
-         
-         <Grid item xs={11} md={4.5} xl={4}  >
-            <Grid container sx={{alignItems:"center",justifyContent:"center"}}>
-               <Grid item sx={{display:"flex", justifyContent:"center", border:"0px solid white",p:1}}  >
-                  <div style={{display:"flex", justifyContent:"center",border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
 
-                     <Avatar 
-                        src={isMobile ? imgWallpaperMobile : imgWallpaper} 
-                        alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
-                        sx={{
-                           // border:"2px solid blue",
-                           pb:{lg:0,xl:4},
-                           borderRadius:0,
-                           height:{xs:"auto",md:"130px", lg:"auto",xl:"300px"}, 
-                           width:{xs:"auto",md:"130px",lg:"auto",xl:"600px"}
-                        }}
-                        imgProps={{
-                           width: isMobile ? "380" : "600",
-                           height: isMobile ? "200" : "300",
-                           sx:{
-                              // border:"2px solid red",
-                              pb:{xs:1,md:0},
-                              height:{xs:"200px",md:"200px",lg:"250px",xl:"300px"}, 
-                              width:{xs:"380px",md:"400px",lg:"500px",xl:"600px"},
-                           },
-                           // srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
-                           // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
-                        }}
-                     />
+         <Grid className={'wallpaperProblematico'} item xs={11} sm={5} md={4.5} xl={4}  sx={{border:"0px solid red"}}>
+            <div style={{display:"flex", justifyContent:"center",border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
 
-                  </div>
-               </Grid>
-            </Grid>
+               <Avatar 
+                  src={isMobile ? imgWallpaperMobile : imgWallpaper} 
+                  alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
+                  sx={{
+                     border:"0px solid blue",
+                     pb:{lg:0,xl:4},
+                     borderRadius:0,
+                     display: "contents",
+                     // height:{xs:"auto",md:"130px",lg:"300px",xl:"300px"}, 
+                     // width:{xs:"auto",md:"130px",lg:"600px",xl:"600px"}
+                  }}
+                  imgProps={{
+                     width: isMobile ? "380" : "600",
+                     height: isMobile ? "192" : "300",
+                     sx:{
+                        border:"0px solid red",
+                        m:{xs:"0px 0px 4px 0px",sm:"0px 0px 8px 0px"},
+                        // pb:{xs:1,md:1.2},
+                        width:{xs:"375px",sm:"330px",md:"340px",lg:"520px",xl:"100%"},
+                        height:{xs:"190px",sm:"160px",md:"170px",lg:"250px",xl:"auto"}, 
+                     },
+                     // loading:"lazy", // para imagens da primeira dobra nao se aplica o carregamento lazy
+                     srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
+                     sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
+                     // rel: "preload",
+                  }}
+               />
+
+            </div>
 
          </Grid>
          
@@ -114,7 +115,6 @@ const Home: React.FC<HomeProps> = ({ children }) => {
             </div>
          </Grid>
          
-         {children}
       </Grid>
    )
 }

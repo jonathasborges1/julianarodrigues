@@ -44,7 +44,7 @@ const Sidebar: React.FC = () => {
    return(
       <header style={{border:"0px solid red"}}>
          <nav style={{border:"0px solid blue"}}>
-            <Grid container sx={{gap:5, border:"0px solid white", display:{xs:"block", md:"flex"}, pr:{lg:2}  }}>
+            <Grid container className={"sidebar-container"} sx={{gap:1, border:"0px solid white", display:{xs:"block", sm:"flex"}, pr:{lg:2}  }}>
                {menuList.map((item,index) => {
                   return(
                      <Grid item key={index} sx={{ border:"0px solid red", p:"0px 0px",  }} >

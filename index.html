@@ -121,13 +121,15 @@
       window.global = window;
     </script>
 
+    <%- injectScript %>
+
     <!-- FIM das meta tags inseridas manualmente -->
       <!-- Inicio das meta tags inseridas apos build -->
 
   </head>
   <body>
 
-    <noscript>You need to enable JavaScript to run this app. v0.0.4</noscript>
+    <noscript>You need to enable JavaScript to run this app. v0.0.5</noscript>
     <div id="root">
       <div className="container">
         <div className="loading">
@@ -140,6 +142,6 @@
       </div>
     </div>
 
-    <script defer type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

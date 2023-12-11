@@ -104,7 +104,7 @@ const Home: React.FC<HomeProps> = () => {
                         // loading:"lazy", // para imagens da primeira dobra nao se aplica o carregamento lazy
                         // srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
                         // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
-                        // rel: "preload",
+                        rel: "preload",
                      }}
                   />
                </Grid>

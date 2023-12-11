@@ -1,7 +1,7 @@
-import { Grid } from '@mui/material';
 import React, { Suspense, lazy } from 'react';
+import { Grid } from '@mui/material';
 
-const AppBarCustom = lazy(() => import('../AppBarCustom'))
+const AppBarCustom  = lazy(() => import('../AppBarCustom'))
 
 // const Main = styled('main')(({ theme }) => ({
 //    flexGrow: 1,

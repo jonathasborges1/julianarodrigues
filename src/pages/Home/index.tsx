@@ -97,8 +97,8 @@ const Home: React.FC<HomeProps> = () => {
                         height:{xs:"190px",sm:"160px",md:"170px",lg:"250px",xl:"auto"}, 
                      },
                      // loading:"lazy", // para imagens da primeira dobra nao se aplica o carregamento lazy
-                     srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
-                     sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
+                     // srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
+                     // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                      // rel: "preload",
                   }}
                />

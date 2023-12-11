@@ -38,7 +38,6 @@ const About: React.FC<AboutProps> = () => {
             sx={{
                   border:"0px solid blue", 
                   textAlign:"center",
-
                }}
                >
 
@@ -61,17 +60,15 @@ const About: React.FC<AboutProps> = () => {
                            // border:"3px solid blue",
                            width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
                            height:{xs:"125px",md:"130px", lg:"140px",xl:"150px"}, 
-                           
                         }}
                         imgProps={{
-                           width:  isMobile ? "120px" : "150px",  
-                           height: isMobile ? "125px" : "150px",
+                           width:  isMobile ? "120" : "150",  
+                           height: isMobile ? "125" : "150",
                            sx:{
                               // border:"5px solid red",
                               height:{xs:"120px",md:"130px",lg:"140px",xl:"150px"}, 
                               width:{xs:"120px",md:"130px",lg:"140px",xl:"150px"},
                            },
-                           // style:responsiveStyle,
                            // srcSet: `${avatarIMGMOBILE} 380w, ${avatarIMG} 500w, ${avatarIMG} 600w`,
                            // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
                            // loading:"lazy"

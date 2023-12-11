@@ -5,12 +5,7 @@ import { StrictMode, Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 
 // import App from './App.tsx'
-
-const App = lazy(() =>
-  import(/* webpackChunkName: "App" */ './App').then(module => ({
-    default: module.App,
-  }))
-);
+const App = lazy(() => import('./App.tsx')); 
 
 const loader = (
   <div className="container">
@@ -23,7 +18,6 @@ const loader = (
     </div>
   </div>
 );
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import theme from './theme';
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
@@ -14,4 +14,6 @@ export const App: React.FC = () => {
     </ThemeProvider>
   )
 }
+
+export default App
 

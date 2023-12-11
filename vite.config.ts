@@ -13,7 +13,7 @@ import svgr from '@svgr/rollup';
 const port = parseInt(process.env.PORT ?? '5000', 10);
 
 const manifestForPlugin: Partial<VitePWAOptions> = {
-	registerType: "autoUpdate", // prompt
+	registerType: "autoUpdate", 
 	includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
 	manifest: {
 		name: "Juliana Souza Rodrigues",
@@ -31,27 +31,27 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
 				src: "/android-chrome-192x192.png",
 				sizes: "192x192",
 				type: "image/png",
-        purpose: 'any maskable',
+        purpose: 'maskable',
 			},
 			{
 				src: "/android-chrome-512x512.png",
 				sizes: "512x512",
 				type: "image/png",
+        purpose: 'maskable',
 			},
 			{
 				src: "/apple-touch-icon.png",
 				sizes: "180x180",
 				type: "image/png",
-				purpose: "any",
+				purpose: "maskable",
 			},
 			{
 				src: "/maskable_icon.png",
 				sizes: "225x225",
 				type: "image/png",
-				purpose: "maskable icon",
+				purpose: "maskable",
 			},
 		],
-
 	},
 };
 
@@ -123,13 +123,3 @@ export default defineConfig({
     cors: true
   },
 });
-
-
-
-
-
-
-
-
-
-

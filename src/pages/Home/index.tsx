@@ -73,37 +73,41 @@ const Home: React.FC<HomeProps> = () => {
          </Grid>
 
          <Grid className={'wallpaperProblematico'} item xs={11} sm={5} md={4.5} xl={4}  sx={{border:"0px solid red"}}>
-            <div style={{display:"flex", justifyContent:"center",border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)"}} >
 
-               <Avatar 
-                  src={isMobile ? imgWallpaperMobile : imgWallpaper} 
-                  alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
-                  sx={{
-                     border:"0px solid blue",
-                     pb:{lg:0,xl:4},
-                     borderRadius:0,
-                     display: "contents",
-                     // height:{xs:"auto",md:"130px",lg:"300px",xl:"300px"}, 
-                     // width:{xs:"auto",md:"130px",lg:"600px",xl:"600px"}
-                  }}
-                  imgProps={{
-                     width: isMobile ? "380" : "600",
-                     height: isMobile ? "192" : "300",
-                     sx:{
-                        border:"0px solid red",
-                        m:{xs:"0px 0px 4px 0px",sm:"0px 0px 8px 0px"},
-                        // pb:{xs:1,md:1.2},
-                        width:{xs:"375px",sm:"330px",md:"340px",lg:"520px",xl:"100%"},
-                        height:{xs:"190px",sm:"160px",md:"170px",lg:"250px",xl:"auto"}, 
-                     },
-                     // loading:"lazy", // para imagens da primeira dobra nao se aplica o carregamento lazy
-                     // srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
-                     // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
-                     // rel: "preload",
-                  }}
-               />
-
-            </div>
+               <Grid container
+                     sx={{
+                        display:"flex", justifyContent:"center", 
+                        border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)",
+                        width:{xs:"380px",sm:"330px",md:"340px",lg:"520px",xl:"100%"},
+                        height:{xs:"200px",sm:"170px",md:"180px",lg:"250px",xl:"auto"}, 
+                     }} 
+               >
+                  <Avatar 
+                     src={isMobile ? imgWallpaperMobile : imgWallpaper} 
+                     alt={isMobile ? "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper-mobile" : "juliana-rodrigues-direito-trabalhista-imagem-agente-limpeza-wallpaper"}
+                     sx={{
+                        border:"0px solid blue",
+                        pb:{xs:3,lg:0,xl:4},
+                        borderRadius:0,
+                        display: "contents",
+                     }}
+                     imgProps={{
+                        width: isMobile ? "380" : "600",
+                        height: isMobile ? "192" : "300",
+                        sx:{
+                           border:"0px solid red",
+                           m:{xs:"0px 0px 4px 0px",sm:"0px 0px 8px 0px"},
+                           width:{xs:"375px",sm:"330px",md:"340px",lg:"520px",xl:"100%"},
+                           height:{xs:"190px",sm:"160px",md:"170px",lg:"250px",xl:"auto"}, 
+                           // display:"none"
+                        },
+                        // loading:"lazy", // para imagens da primeira dobra nao se aplica o carregamento lazy
+                        // srcSet: `${imgWallpaperMobile} 380w, ${imgWallpaperMobile} 500w, ${imgWallpaper} 600w`,
+                        // sizes: `(max-width: 380px) 100vw, (max-width: 500px) 100vw, 600px`,
+                        // rel: "preload",
+                     }}
+                  />
+               </Grid>
 
          </Grid>
          

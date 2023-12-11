@@ -49,7 +49,6 @@
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/svg+xml" href="/julianarodrigueslogotipo.svg" />
-    <link rel="manifest" href="/manifest.webmanifest" />    
 
     <style type="text/css">
       .container {
@@ -128,8 +127,18 @@
   </head>
   <body>
 
-    <noscript>You need to enable JavaScript to run this app. v0.0.3</noscript>
-    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app. v0.0.4</noscript>
+    <div id="root">
+      <div className="container">
+        <div className="loading">
+          <span className="pulse spinner">
+            App is loading. Almost done.
+            <br />
+            Please wait.
+          </span>
+        </div>
+      </div>
+    </div>
 
     <script defer type="module" src="/src/main.tsx"></script>
   </body>

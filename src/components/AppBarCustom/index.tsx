@@ -4,9 +4,6 @@ import { useTheme } from '@mui/system';
 import { Grid, IconButton, Typography, Toolbar, AppBar, Drawer, Hidden } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from '../Sidebar';
-// import Sidebar from 'src/components/Sidebar';
-
-// import Sidebar from '../Sidebar';
 
 interface AppBarCustomProps {
    children?: React.ReactNode;

@@ -1,6 +1,4 @@
-// import './style.css';
 import './pulse.css';
-// import './pulseShadow.css';
 import React from 'react';
 import { Button, ButtonProps } from '@mui/material';
 

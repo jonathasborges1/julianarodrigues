@@ -1,7 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Grid } from '@mui/material';
 
-const AppBarCustom  = lazy(() => import('../AppBarCustom'))
+import AppBarCustom from '../AppBarCustom';
 
 // const Main = styled('main')(({ theme }) => ({
 //    flexGrow: 1,
@@ -23,9 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     >
       
       {/* VERSAO DESKTOP / MOBILE */}
-      <Suspense fallback={<div>Sidebar is Loading... . .</div>}>
-        <AppBarCustom/>
-      </Suspense>
+      <AppBarCustom/>
 
       {/* Conteúdo Principal */}
       <Grid className='layout-conteudo-principal' container sx={{p:0, justifyContent:"center"}} >

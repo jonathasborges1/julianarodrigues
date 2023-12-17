@@ -11,6 +11,7 @@ import About from './About';
 import Service from './Service';
 
 import Footer from '../components/Footer';
+import Maps from './Maps';
 
 interface SinglePageApplicationProps {
    children?: React.ReactNode;
@@ -29,8 +30,12 @@ const SinglePageApplication: React.FC<SinglePageApplicationProps> = () => {
                <About />
             </Grid>
 
-            <Grid item className={"SinglePageApplication-item-Service"} xs={12}> 
+            <Grid item xs={12} className={"SinglePageApplication-item-Service"}> 
                <Service/>
+            </Grid>
+
+            <Grid item xs={12} className={"SinglePageApplication-item-Maps"}>
+               <Maps/>
             </Grid>
 
             <Grid item xs={12}>

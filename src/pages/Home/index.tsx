@@ -14,20 +14,20 @@ interface HomeProps {
    children?: React.ReactNode;
 }
 
+export const handleWhatsappContant = () => {
+   const phoneNumber = '5592982301415'; // Coloque o número de telefone desejado
+   const message = 'Olá, gostaria de falar sobre o direito trabalhista.'; // Mensagem padrão
+ 
+   // Cria o link do WhatsApp
+   const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+   
+   // Abre o link no navegador
+   window.open(whatsappLink, '_blank');
+}
+
 const Home: React.FC<HomeProps> = () => {
 
    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // abaixo de sm = xs
-
-   const handleWhatsappContant = () => {
-      const phoneNumber = '5592982301415'; // Coloque o número de telefone desejado
-      const message = 'Olá, gostaria de falar sobre o direito trabalhista.'; // Mensagem padrão
-    
-      // Cria o link do WhatsApp
-      const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-      
-      // Abre o link no navegador
-      window.open(whatsappLink, '_blank');
-   }
 
    return (
       <Grid id={"home"} container 

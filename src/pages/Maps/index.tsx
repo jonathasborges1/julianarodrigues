@@ -86,6 +86,9 @@ const Maps: React.FC<Props> = () => {
                      <Grid item xs={10} sx={{border:"0px solid red"}}>
                         <TypographyBlack variant={"h3"}>Manaus - AM</TypographyBlack>
                         <TypographyBlack variant={"body2"} sx={{fontSize:{xs:"0.92rem",}}} >R. Salvador, 120 - Adrianópolis, Manaus - AM, 69057-040</TypographyBlack>
+                        <Button variant={"contained"} onClick={requestLocation} sx={{ display:"none", marginTop: '0.8rem' }} >
+                           <Typography variant='body1'>Abrir no Google Maps</Typography>
+                        </Button>
                         <Button variant={"contained"} onClick={openGoogleMaps} sx={{ marginTop: '0.8rem' }} >
                            <Typography variant='body1'>Abrir no Google Maps</Typography>
                         </Button>

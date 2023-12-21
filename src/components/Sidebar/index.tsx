@@ -19,6 +19,14 @@ const Sidebar: React.FC = () => {
             label: "Área de atuação",
             href: "#service"
          },
+         {
+            label: "Escritorio",
+            href: "#escritorio"
+         },
+         {
+            label: "Links",
+            href: "#links"
+         },
       ]
    },[]);
 

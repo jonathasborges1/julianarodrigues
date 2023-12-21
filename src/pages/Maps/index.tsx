@@ -52,7 +52,7 @@ const Maps: React.FC<Props> = () => {
    }
 
    return (
-      <Grid container sx={{border:"0px solid red", padding:{xs:2,lg:8} ,gap:{xs:1,lg:1.5,xl:3}, justifyContent:"center",background:"rgba(255,255,255,0.9)"}}>
+      <Grid container id={"escritorio"} sx={{border:"0px solid red", padding:{xs:2,lg:8} ,gap:{xs:1,lg:1.5,xl:3}, justifyContent:"center",background:"rgba(255,255,255,0.9)"}}>
 
          <Grid item xs={12} md={12} sx={{p:{xs:"1.5rem 0rem",md:"0px 0px"}}}>
             <Typography variant={"h1"} sx={{color:"black"}} >Mapa do Escritorio</Typography>

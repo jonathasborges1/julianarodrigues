@@ -71,16 +71,16 @@ const theme = createTheme({
         fontSize: '1.2rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
-        fontSize: '1.4rem', // Para telas small (sm) e maiores
+        fontSize: '1.3rem', // Para telas small (sm) e maiores
       },
       '@media (min-width:900px)': {
-        fontSize: '1.5rem', // Para telas medium (md) e maiores
+        fontSize: '1.3rem', // Para telas medium (md) e maiores
       },
       '@media (min-width:1200px)': {
-        fontSize: '1.8rem', // Para telas large (lg) e maiores
+        fontSize: '1.4rem', // Para telas large (lg) e maiores
       },
       '@media (min-width:1536px)': {
-        fontSize: '1.9rem', // Para telas extra-large (xl) e maiores
+        fontSize: '1.6rem', // Para telas extra-large (xl) e maiores
       },
     },
     body1:{

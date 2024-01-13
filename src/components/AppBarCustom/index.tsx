@@ -29,7 +29,7 @@ const AppBarCustom: React.FC<AppBarCustomProps> = ({ ...props }) => {
               <Typography variant="h6" sx={{border:"0px solid red",p:0,m:0 ,fontFamily: "'Great Vibes', cursive;", letterSpacing:"3px",color:"#BF985B" }}>
                   Juliana Rodrigues
               </Typography>
-              <Typography variant='h6' sx={{border:"0px solid red",fontSize:"10px",letterSpacing:"6px",m:-1}}>
+              <Typography variant='body1' sx={{border:"0px solid red",fontSize:"10px", letterSpacing:"4px",m:-0.5}}>
                 ADVOGADA 
               </Typography>
 

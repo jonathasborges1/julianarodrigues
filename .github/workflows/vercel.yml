@@ -11,6 +11,7 @@ on:
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
       - name: Install Vercel CLI
@@ -27,4 +28,4 @@ jobs:
 
 
 
-# # documentacao em https://vercel.com/guides/how-can-i-use-github-actions-with-vercel
+# documentacao em https://vercel.com/guides/how-can-i-use-github-actions-with-vercel

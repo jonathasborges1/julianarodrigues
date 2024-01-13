@@ -27,6 +27,10 @@ const Sidebar: React.FC = () => {
             label: "Links",
             href: "#links"
          },
+         {
+            label: "Contato",
+            href: "#contato"
+         },
       ]
    },[]);
 

@@ -1,0 +1,13 @@
+#recaptcha iframe{
+   width: 250px;
+   height: 65px;
+   border:0px solid red;
+}
+
+/* Estilos para o recaptcha em dispositivos móveis */
+@media only screen and (max-width: 599px) {
+   #recaptcha iframe {
+      width: 250px;
+      border: 0px solid blue;
+   }
+}

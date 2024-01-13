@@ -13,6 +13,7 @@ import Service from './Service';
 import Footer from '../components/Footer';
 import Maps from './Maps';
 import Links from './Links';
+import Contact from './Contact';
 
 interface SinglePageApplicationProps {
    children?: React.ReactNode;
@@ -25,27 +26,31 @@ const SinglePageApplication: React.FC<SinglePageApplicationProps> = () => {
    const SPA = [
       {
          section: <Home/>,
-         display:diplayDefault,
+         display: diplayDefault,
       },
       {
          section: <About/>,
-         display:diplayDefault,
+         display: diplayDefault,
       },
       {
          section: <Service/>,
-         display:diplayDefault,
+         display: diplayDefault,
       },
       {
          section: <Maps/>,
-         display:"",
+         display: diplayDefault,
       },
       {
          section: <Links/>,
+         display: diplayDefault,
+      },
+      {
+         section: <Contact/>,
          display:"",
       },
       {
          section: <Footer/>,
-         display:diplayDefault,
+         display: diplayDefault,
       },
    ]
 

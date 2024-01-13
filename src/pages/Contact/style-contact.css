@@ -1,0 +1,45 @@
+.warn-board::before{
+   border: 1px solid red;
+   content: "";
+   position: absolute;
+   width: 42vw;
+   height: inherit;
+   background: rgba(150, 150, 150, 0.10);
+   filter: blur(10px); /* Ajuste o valor do desfoque conforme necessário */
+}
+
+@media only screen and (max-width: 599px) {
+   .warn-board::before{
+      border: 1px solid red;
+      content: "";
+      position: absolute;
+      width: 85vw;
+      height: inherit;
+      background: rgba(150, 150, 150, 0.10);
+      filter: blur(10px); /* Ajuste o valor do desfoque conforme necessário */
+   }
+}
+
+.warn-board {
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  /* max-height: 500px; */
+  width: inherit;
+  border-radius:10px;
+}
+
+.gmail-background{
+   border: 0px solid red;
+   height: 50vh;
+   width: 40vw;
+   position:absolute;
+   z-index: 1;
+
+}
+
+.gmail-background > img{
+   border: 1px solid blue;
+}

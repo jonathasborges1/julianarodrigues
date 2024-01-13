@@ -9,7 +9,11 @@
 
   import react from '@vitejs/plugin-react';
   import svgr from '@svgr/rollup';
+  import dotenv from 'dotenv';
 
+
+  // Carrega as variáveis de ambiente do arquivo .env
+  dotenv.config()
 
   // import wallpaperHome from 'src/assets/juliana-rodrigues-advogada-manaus-wallpaper-mobile-375x190.webp';
 

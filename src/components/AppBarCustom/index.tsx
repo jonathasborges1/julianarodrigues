@@ -20,63 +20,65 @@ const AppBarCustom: React.FC<AppBarCustomProps> = ({ ...props }) => {
 
    return (
       <AppBar className='AppBar-do-jhon' position="fixed" sx={{background:"rgba(0,0,0,0.6)",border:"0px solid blue"}} {...props}>
-      <Toolbar className='Toolbar-do-jhon' >
-        <Grid className='Toolbar-Grid-container' container sx={{ justifyContent:{xs:"center", md:"space-between"}, textAlign:"center", }}>
-          
-          {/* LOGOTIPO */}
-          <Grid item xs={11} sm={11} md={3} lg={3} xl={2} sx={{border:"0px solid red"}} >
-            <Typography variant="h6" sx={{border:"0px solid red",p:0,m:0 ,fontFamily: "'Great Vibes', cursive;", letterSpacing:"3px",color:"#BF985B" }}>
-                Juliana Rodrigues
-            </Typography>
-            <Typography variant='h6' sx={{border:"0px solid red",fontSize:"10px",letterSpacing:"6px",m:-1}}>
-              ADVOGADA 
-            </Typography>
+        <Toolbar className='Toolbar-do-jhon' >
 
-          </Grid>
+          <Grid className='Toolbar-Grid-container' container sx={{ border:"0px solid red" , justifyContent:{xs:"center", md:"space-between"}, textAlign:"center", }}>
+            
+            {/* LOGOTIPO */}
+            <Grid item xs={11} sm={11} md={3} lg={3} xl={2} sx={{border:"0px solid red"}} >
+              <Typography variant="h6" sx={{border:"0px solid red",p:0,m:0 ,fontFamily: "'Great Vibes', cursive;", letterSpacing:"3px",color:"#BF985B" }}>
+                  Juliana Rodrigues
+              </Typography>
+              <Typography variant='h6' sx={{border:"0px solid red",fontSize:"10px",letterSpacing:"6px",m:-1}}>
+                ADVOGADA 
+              </Typography>
 
-          <Grid item xs={1} sm={1} md={7} lg={7} xl={5} sx={{border:"0px solid blue", display:"flex",justifyContent:"end"}}>
-            {/*  VERSAO DESKTOP  */}
-            <Hidden mdDown>  
-              <Sidebar />
-            </Hidden>
+            </Grid>
 
-{/*  VERSAO MOBILE  */}
-            {/* Drawer (Mobile) */}
-            <Hidden lgUp implementation="css">
-                <IconButton
-                  color="inherit"
-                  aria-label="open menu"
-                  edge="end"
-                  onClick={handleDrawerToggle}
-                  sx={{ display: { xs: 'block', md: 'none' }, "&:focus":{outline:"0px solid yellow"}  }}
-                >
-                  <MenuIcon sx={{border:"0px solid yellow"}} /> 
-                </IconButton>
+            <Grid item xs={1} sm={1} md={8} lg={8} xl={7} sx={{border:"0px solid blue", display:"flex", justifyContent:"end"}}>
               
-                <Drawer
-                  variant="temporary"
-                  anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-                  open={mobileOpen}
-                  onClose={handleDrawerToggle}
-                  PaperProps={
-                    {
-                      sx:{background:"rgba(0,0,0,0.6)"},
-                      tabIndex: -1,  // Adicione esta linha para remover o foco
-                      border:"0px solid red"
-                    }
-                  }
-                >
-                  <Sidebar/>
-                </Drawer>
+              {/*  VERSAO DESKTOP  */}
+              <Hidden mdDown>  
+                <Sidebar />
+              </Hidden>
 
-            </Hidden>
+  {/*  VERSAO MOBILE  */}
+              {/* Drawer (Mobile) */}
+              <Hidden lgUp implementation="css">
+                  <IconButton
+                    color="inherit"
+                    aria-label="open menu"
+                    edge="end"
+                    onClick={handleDrawerToggle}
+                    sx={{ display: { xs: 'block', md: 'none' }, "&:focus":{outline:"0px solid yellow"}  }}
+                  >
+                    <MenuIcon sx={{border:"0px solid yellow"}} /> 
+                  </IconButton>
+                
+                  <Drawer
+                    variant="temporary"
+                    anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    PaperProps={
+                      {
+                        sx:{background:"rgba(0,0,0,0.6)"},
+                        tabIndex: -1,  // Adicione esta linha para remover o foco
+                        border:"0px solid red"
+                      }
+                    }
+                  >
+                    <Sidebar/>
+                  </Drawer>
+
+              </Hidden>
+
+            </Grid>
 
           </Grid>
-
-        </Grid>
-        
-      </Toolbar>
-    </AppBar>  
+          
+        </Toolbar>
+      </AppBar>  
    )
 }
 

@@ -11,7 +11,7 @@ const Title: React.FC<TitleProps> = ({ children, ...props }) => {
          <Grid item xs={12} sx={{border:"0px solid red"}}>
             <Typography variant={"h1"} sx={{border:"0px solid blue",width:"fit-content"}}>
                {children}
-               <Divider sx={{ border:"3px solid red",borderRadius:2,m:{xs:"10px 0px 0px 0px"}, width:"80%" }} />
+               <Divider sx={{ border:"3px solid red",borderRadius:2,m:{xs:"10px 0px 0px 0px"}, width:"30%" }} />
             </Typography>
          </Grid>
       </Grid>

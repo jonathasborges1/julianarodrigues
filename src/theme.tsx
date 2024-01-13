@@ -22,7 +22,6 @@ declare module '@mui/material/styles' {
   }
 }
 
-
 const theme = createTheme({
   typography: {
     fontFamily: "'Montserrat Variable', sans-serif",
@@ -31,7 +30,7 @@ const theme = createTheme({
       fontWeight:700,
       fontSize: '2rem', // Tamanho padrão
       '@media (min-width:0px)': {
-        fontSize: '1.75rem', // Para telas small (xs) e maiores
+        fontSize: '1.6rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
         fontSize: '1.5rem', // Para telas small (sm) e maiores
@@ -40,7 +39,7 @@ const theme = createTheme({
         fontSize: '1.5rem', // Para telas medium (md) e maiores
       },
       '@media (min-width:1200px)': {
-        fontSize: '2.3rem', // Para telas large (lg) e maiores
+        fontSize: '2.6rem', // Para telas large (lg) e maiores
       },
       '@media (min-width:1536px)': {
         fontSize: '2.6rem', // Para telas extra-large (xl) e maiores
@@ -50,7 +49,7 @@ const theme = createTheme({
       fontWeight:700,
       fontSize: '2rem', // Tamanho padrão
       '@media (min-width:0px)': {
-        fontSize: '1.4rem', // Para telas small (xs) e maiores
+        fontSize: '1.2rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
         fontSize: '1.4rem', // Para telas small (sm) e maiores
@@ -59,7 +58,26 @@ const theme = createTheme({
         fontSize: '1.5rem', // Para telas medium (md) e maiores
       },
       '@media (min-width:1200px)': {
-        fontSize: '1.6rem', // Para telas large (lg) e maiores
+        fontSize: '1.8rem', // Para telas large (lg) e maiores
+      },
+      '@media (min-width:1536px)': {
+        fontSize: '1.9rem', // Para telas extra-large (xl) e maiores
+      },
+    },
+    h6: {
+      fontWeight:700,
+      fontSize: '2rem', // Tamanho padrão
+      '@media (min-width:0px)': {
+        fontSize: '1.2rem', // Para telas small (xs) e maiores
+      },
+      '@media (min-width:600px)': {
+        fontSize: '1.4rem', // Para telas small (sm) e maiores
+      },
+      '@media (min-width:900px)': {
+        fontSize: '1.5rem', // Para telas medium (md) e maiores
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '1.8rem', // Para telas large (lg) e maiores
       },
       '@media (min-width:1536px)': {
         fontSize: '1.9rem', // Para telas extra-large (xl) e maiores
@@ -69,7 +87,7 @@ const theme = createTheme({
       fontWeight:300,
       // fontSize: '2rem', // Tamanho padrão
       '@media (min-width:0px)': {
-        fontSize: '0.92rem', // Para telas small (xs) e maiores
+        fontSize: '0.75rem', // Para telas small (xs) e maiores
       },
       '@media (min-width:600px)': {
         fontSize: '0.8rem', // Para telas small (sm) e maiores
@@ -78,7 +96,7 @@ const theme = createTheme({
         fontSize: '1rem', // Para telas medium (md) e maiores
       },
       '@media (min-width:1200px)': {
-        fontSize: '1.1rem', // Para telas large (lg) e maiores
+        fontSize: '0.9rem', // Para telas large (lg) e maiores
       },
       '@media (min-width:1536px)': {
         fontSize: '1.1rem', // Para telas extra-large (xl) e maiores

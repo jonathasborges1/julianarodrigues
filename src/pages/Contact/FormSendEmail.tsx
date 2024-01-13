@@ -7,7 +7,7 @@ import { Button, CircularProgress, Grid } from '@mui/material';
 import { EmailGoogleForm, SendEmailWithGoogleForm } from '../../module/googleForm';
 
 import ConfigApp from '../../config';
-import { IEmail, sendEmail } from '../../module/gmail';
+// import { IEmail, sendEmail } from '../../module/gmail';
 
 interface Props {
    children?: React.ReactNode;
@@ -70,39 +70,39 @@ const FormSendEmail: React.FC<Props> = () => {
       }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const handleSendMessageWithOauth2 = async (event: React.FormEvent) => {
-      event.preventDefault();
-      try {
-        setLoadEmail(true);
+
+    // const handleSendMessageWithOauth2 = async (event: React.FormEvent) => {
+    //   event.preventDefault();
+    //   try {
+    //     setLoadEmail(true);
   
-        if(!isCaptchaSuccessful) throw new Error("Nao foi possivel Resolver o Recaptcha, tente novamente");
+    //     if(!isCaptchaSuccessful) throw new Error("Nao foi possivel Resolver o Recaptcha, tente novamente");
         
-        // o Google Service Account BOT acessa sua conta e envia um email automaticamente como se fosse voce
-        // Substituir o "from" com base nas credenciais usadas no momento de obter REFRESH_TOKEN - Ex: "from: nome do proprietario <seu.email@gmail.com>" 
-        const emailData: IEmail = {
-          lead: lead,
-          from: fromDefault, 
-          to: toDefault, // Substitua pelo e-mail do destinatário
-          cc: [`Lead <${lead}>`,'Suporte Tecnico <jonathasborges0@gmail.com>','Juliana Rodrigues Advogada <julianasouzarodrigues.adv@gmail.com>'],
-          subject: subject, //'Assunto do E-mail',
-          body: body, // 'Corpo do E-mail',
-        }
+    //     // o Google Service Account BOT acessa sua conta e envia um email automaticamente como se fosse voce
+    //     // Substituir o "from" com base nas credenciais usadas no momento de obter REFRESH_TOKEN - Ex: "from: nome do proprietario <seu.email@gmail.com>" 
+    //     const emailData: IEmail = {
+    //       lead: lead,
+    //       from: fromDefault, 
+    //       to: toDefault, // Substitua pelo e-mail do destinatário
+    //       cc: [`Lead <${lead}>`,'Suporte Tecnico <jonathasborges0@gmail.com>','Juliana Rodrigues Advogada <julianasouzarodrigues.adv@gmail.com>'],
+    //       subject: subject, //'Assunto do E-mail',
+    //       body: body, // 'Corpo do E-mail',
+    //     }
   
-        await sendEmail(emailData);
+    //     await sendEmail(emailData);
   
-        console.log("Email Enviado com sucesso");
-        enqueueSnackbar('Email enviado com sucesso!', { variant: 'success' });
+    //     console.log("Email Enviado com sucesso");
+    //     enqueueSnackbar('Email enviado com sucesso!', { variant: 'success' });
   
-      } catch (error) {
-        console.error(`ContactPage: ${error}`);
-        enqueueSnackbar(`${error}`, { variant: 'error' });
-        enqueueSnackbar('Erro ao enviar o Email.', { variant: 'error' });
+    //   } catch (error) {
+    //     console.error(`ContactPage: ${error}`);
+    //     enqueueSnackbar(`${error}`, { variant: 'error' });
+    //     enqueueSnackbar('Erro ao enviar o Email.', { variant: 'error' });
   
-      }finally{
-        setLoadEmail(false);
-      }
-    }
+    //   }finally{
+    //     setLoadEmail(false);
+    //   }
+    // }
 
 
    return (

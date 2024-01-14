@@ -27,17 +27,17 @@ const Service: React.FC<ServiceProps> = () => {
       const conteudo = [
          {
             icon: <GavelIcon sx={iconStyle}/>, // gavelIcon GavelTwoToneIcon
-            title: "DIREITO TRABALHISTA.",
+            title: "DIREITO TRABALHISTA",
             subtitle:"É o ramo do direito que contém normas jurídicas relacionadas com a estrutura, organização e proteção da família. Trata das relações familiares e das obrigações e direitos decorrentes dessas relações, ou seja, regula e estabelece as normas de convivência familiar...",
          },
          {
             icon: <BalanceIcon sx={iconStyle}/>, // BalanceIcon - BalanceOutlinedIcon
-            title: "DIREITO DO CONSUMIDOR.",
+            title: "DIREITO DO CONSUMIDOR",
             subtitle:"É o ramo do direito que lida com as relações jurídicas entre fornecedores de bens e serviços e seus consumidores. Tem por objetivo assegurar que os consumidores obtenham acesso a informações quanto a origem e qualidade dos produtos e serviços..."
          },
          {
             icon: <CourtIcon sx={iconStyle}/>,//AccountBalanceTwoToneIcon
-            title: "DIREITO PREVIDENCIARIO.",
+            title: "DIREITO PREVIDENCIARIO",
             subtitle:`É a área jurídica que regem a seguridade social e os direitos relacionados aos benefícios previdenciários. 
                      o Direito Previdenciário engloba temas como aposentadoria, pensões, auxílios e demais prestações destinadas a assegurar a dignidade do trabalhador...`
          }
@@ -51,7 +51,7 @@ const Service: React.FC<ServiceProps> = () => {
                      {item.icon}
                      <Typography variant={"h6"} 
                         sx={{
-                           pl:1, m:0, lineHeight:"50px",fontWeight:600,
+                           pl:2, pr:{lg:7,xl:8}, border:"0px solid red", m:0, lineHeight:"35px", fontWeight:600,
                            // fontSize:{
                            //    xs:"1.3rem", 
                            //    lg:"1.2rem",

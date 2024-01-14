@@ -44,19 +44,20 @@ const Home: React.FC<HomeProps> = () => {
          <Grid item xs={11} sm={5} md={6} lg={4.5} sx={{pt:{xs:"0rem"},display:"flex", border:"0px solid red"}}>
             <Grid container 
                sx={{
+                  
                   justifyItems:"center",
                   textAlign:{xs:"center",sm:"left"},
                   gap:{xs:4,lg:5,xl:4}, 
                   p:{xs:1},
                   justifyContent:"center", 
                }}>
-               <Grid item>
-                  <Typography variant={"h1"}  >
+               <Grid item sx={{border:"0px solid blue",}}>
+                  <Typography variant={"h1"}>
                      Advocacia Especializada em <b>direito trabalhista</b>.
                   </Typography>
                </Grid>
-               <Grid item sx={{p:{xl:"0px 24px 0px 0px"}}} >
-                  <Typography variant={"body1"} sx={{fontWeight:200}} > {/* sx={{fontWeight:200, fontSize:{xs:"0.93rem", xl:"1.36rem"}  }}*/}
+               <Grid item sx={{border:"0px solid red", p:{lg:"0px 16px 0px 0px",xl:"0px 24px 0px 0px"}}} >
+                  <Typography variant={"body2"} sx={{fontWeight:200}} > {/* sx={{fontWeight:200, fontSize:{xs:"0.93rem", xl:"1.36rem"}  }}*/}
                      <b style={{color:"#DAA520"}}>Garanta seu direito como trabalhador</b>, Fale agora com um de nossos especialistas e busque agora mesmo seus direitos na justica do trabalho.
                   </Typography>
                </Grid>
@@ -79,7 +80,7 @@ const Home: React.FC<HomeProps> = () => {
                         display:"flex", justifyContent:"center", 
                         border:"2px solid white",borderRadius:2,boxShadow: "0px 0px 30px rgba(255, 255, 255, 0.9)",
                         width:{xs:"380px",sm:"330px",md:"340px",lg:"520px",xl:"100%"},
-                        height:{xs:"200px",sm:"170px",md:"180px",lg:"250px",xl:"auto"}, 
+                        height:{xs:"200px",sm:"170px",md:"180px",lg:"260px",xl:"auto"}, 
                      }} 
                >
                   <Avatar 

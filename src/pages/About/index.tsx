@@ -16,7 +16,7 @@ const About: React.FC<AboutProps> = () => {
    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // abaixo de sm = xs
    
    const textColorBlack = "#000";
-   const backgroundColorWhite = "#b5b5b5" // 212534 // e9e7e1
+   const backgroundColorWhite = "#fff" // 212534 // e9e7e1
 
    return (
       <Grid id={"about"} container 

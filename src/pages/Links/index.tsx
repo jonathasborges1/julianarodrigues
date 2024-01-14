@@ -55,16 +55,19 @@ const Links: React.FC<LinksProps> = () => {
        },
    ]
 
+   const defaultBackground = "#fff";
+   const defaultFontColor = "#000";
+
    return (
-      <Grid container id={"links"} className='links-container' sx={{gap:{xs:0.4,lg:2}, padding:{xs:2,lg:4}, justifyContent:"center"  }} >
+      <Grid container id={"links"} className='links-container' sx={{ color:defaultFontColor, background: defaultBackground, gap:{xs:0.4,lg:2}, padding:{xs:2,lg:4}, justifyContent:"center"  }} >
          <Grid item xs={12} lg={11.4} >
-            <Title sx={{border:"0px solid red"}} >Links</Title>
+            <Title sx={{border:"0px solid red"}}>Links</Title>
          </Grid>
          <Grid item xs={12} lg={11}>
             <Grid container className='links-body-container' sx={{border:"0px solid blue", px:2, pb:{xs:2,lg:0} }}>
                {links.map((item,index) => (
                   <Grid item xs={6} lg={3} key={index} sx={{ p:{xs:"6px 0px 6px 16px", lg:"12px 0px 12px 8px"}, }}>
-                     <a href={item.site} target='_blank' style={{color:"rgba(255,255,255,0.5)",  }}>
+                     <a href={item.site} target='_blank' style={{   }}>
                         {item.title}
                         <Typography variant={"caption"} sx={{display:{xs:"none",md:"flex"}}}>{item.site}</Typography>
                      </a>

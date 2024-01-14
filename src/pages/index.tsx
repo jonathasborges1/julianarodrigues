@@ -41,12 +41,12 @@ const SinglePageApplication: React.FC<SinglePageApplicationProps> = () => {
          display: diplayDefault,
       },
       {
-         section: <Links/>,
-         display: diplayDefault,
-      },
-      {
          section: <Contact/>,
          display:"",
+      },
+      {
+         section: <Links/>,
+         display: diplayDefault,
       },
       {
          section: <Footer/>,

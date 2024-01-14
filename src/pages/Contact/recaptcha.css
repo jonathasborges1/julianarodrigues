@@ -1,13 +1,23 @@
 #recaptcha iframe{
-   width: 250px;
-   height: 65px;
+   width: 310px;
+   height: 80px;
    border:0px solid red;
+}
+
+/* Estilos para o recaptcha em dispositivos móveis */
+@media only screen and (max-width: 1600px) {
+   #recaptcha iframe {
+      width: 300px;
+      height: 70px;
+      border: 0px solid purple;
+   }
 }
 
 /* Estilos para o recaptcha em dispositivos móveis */
 @media only screen and (max-width: 599px) {
    #recaptcha iframe {
-      width: 250px;
+      width: 300px;
+      height: 75px;
       border: 0px solid blue;
    }
 }

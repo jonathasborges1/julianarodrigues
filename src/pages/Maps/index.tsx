@@ -70,7 +70,7 @@ const Maps: React.FC<Props> = () => {
                width="inherit" 
                height="450"  
                loading="lazy"
-               style={{width:"inherit !important"}}
+               // style={{width:"inherit !important"}}
             />
          </Grid>
 
